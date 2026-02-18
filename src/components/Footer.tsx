@@ -3,7 +3,7 @@ import { LeadFormButton } from "@/components/LeadForm"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40 bg-card/30">
+    <footer className="relative z-10 border-t border-border/40 bg-card/30">
       <div className="container max-w-screen-xl py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
