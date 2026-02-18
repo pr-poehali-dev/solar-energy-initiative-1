@@ -42,12 +42,10 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <Card className="bg-accent/50 border-dashed border-border/60">
       <CardHeader>
-        <CardTitle className="flex items-center gap-3">
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/20">
-            <Icon name={icon} size={20} className="text-primary" />
-          </span>
-          <span>{title}</span>
-        </CardTitle>
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/20 mb-3">
+          <Icon name={icon} size={20} className="text-primary" />
+        </span>
+        <CardTitle className="text-base leading-snug">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <p className="text-muted-foreground">{description}</p>
