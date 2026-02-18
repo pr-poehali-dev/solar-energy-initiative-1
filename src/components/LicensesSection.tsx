@@ -25,6 +25,8 @@ const licenses = [
     images: [
       "https://cdn.poehali.dev/files/20684673-884c-4604-baf2-dc353894e6cb.jpg",
       "https://cdn.poehali.dev/files/df7e507a-c979-4216-bd4b-fa19a41891f6.jpg",
+      "https://cdn.poehali.dev/files/993663c1-fa38-4963-937f-2b91f0785c34.jpg",
+      "https://cdn.poehali.dev/files/e969b820-68c3-4110-966f-40f55680cc36.jpg",
     ],
   },
 ]
