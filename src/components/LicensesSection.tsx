@@ -54,7 +54,7 @@ export function LicensesSection() {
         {licenses.map((license, i) => (
           <Card
             key={i}
-            className="bg-card/50 border-border/40 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+            className="bg-card/80 border-border/40 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
             onClick={() => openLicense(i)}
           >
             <CardContent className="pt-6">
@@ -66,7 +66,7 @@ export function LicensesSection() {
                 />
               </div>
               <div className="flex items-start gap-2">
-                <Icon name="ShieldCheck" size={18} className="text-yellow-500 flex-shrink-0 mt-0.5" />
+                <Icon name="ShieldCheck" size={18} className="text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="font-semibold text-sm">{license.title}</div>
                   <div className="text-xs text-muted-foreground mt-1">{license.description}</div>

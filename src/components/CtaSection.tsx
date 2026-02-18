@@ -6,7 +6,7 @@ export function CtaSection() {
   return (
     <section className="container max-w-screen-xl py-24 text-center">
       <div className="flex justify-center mb-6">
-        <Icon name="Zap" size={48} className="text-yellow-500" />
+        <Icon name="Zap" size={48} className="text-primary" />
       </div>
       <h2 className="text-3xl font-bold mb-4">Нужен электромонтаж?</h2>
       <p className="text-muted-foreground max-w-xl mx-auto mb-8">

@@ -15,10 +15,10 @@ export function PersonalOsSection() {
             От проектирования до финальной проверки — мы берём на себя все этапы электромонтажа, чтобы вы получили надёжную и безопасную электросистему.
           </p>
 
-          <Card className="bg-card/50 border-border/40 mb-6">
+          <Card className="bg-card/80 border-border/40 mb-6">
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium flex items-center gap-2">
-                <Icon name="Zap" size={16} className="text-yellow-500" />
+                <Icon name="Zap" size={16} className="text-primary" />
                 Бесплатный выезд на объект
               </CardTitle>
             </CardHeader>
@@ -36,14 +36,14 @@ export function PersonalOsSection() {
         </div>
 
         <div className="space-y-6">
-          <Card className="bg-card/50 border-border/40">
+          <Card className="bg-card/80 border-border/40">
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div> Как мы работаем
               </CardTitle>
             </CardHeader>
             <CardContent className="text-xs font-mono">
-              <div className="text-yellow-500 mb-1">→ Заявка или звонок</div>
+              <div className="text-primary mb-1">→ Заявка или звонок</div>
               <div className="text-muted-foreground mb-1">→ Бесплатный выезд и замер</div>
               <div className="text-muted-foreground mb-1">→ Согласование сметы</div>
               <div className="text-muted-foreground mb-1">→ Выполнение работ</div>
@@ -71,8 +71,8 @@ interface FeatureItemProps {
 function FeatureItem({ icon, title }: FeatureItemProps) {
   return (
     <div className="flex items-center gap-2">
-      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-yellow-500/20 flex items-center justify-center">
-        <Icon name={icon} size={12} className="text-yellow-500" />
+      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
+        <Icon name={icon} size={12} className="text-primary" />
       </div>
       <span className="text-sm">{title}</span>
     </div>
@@ -87,8 +87,8 @@ interface FeatureCheckProps {
 function FeatureCheck({ icon, title }: FeatureCheckProps) {
   return (
     <div className="flex items-center gap-2 bg-accent/50 rounded-md p-2">
-      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-500/20 flex items-center justify-center">
-        <Icon name={icon} size={12} className="text-yellow-500" />
+      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+        <Icon name={icon} size={12} className="text-primary" />
       </div>
       <span className="text-xs">{title}</span>
     </div>

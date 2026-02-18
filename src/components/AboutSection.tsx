@@ -12,7 +12,7 @@ export function AboutSection() {
     <section className="container max-w-screen-xl py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="text-sm text-yellow-500 font-semibold mb-2 uppercase tracking-wider">О компании</p>
+          <p className="text-sm text-primary font-semibold mb-2 uppercase tracking-wider">О компании</p>
           <h2 className="text-3xl font-bold mb-6">ООО «СК Пересвет»</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Осуществляем работы различного масштаба и объёма на всех этапах процесса — от идеи и разработки проекта до ввода объекта в эксплуатацию. Мы предоставляем партнёрам возможность выбирать наиболее удобную форму сотрудничества.
@@ -26,10 +26,10 @@ export function AboutSection() {
           {highlights.map((item, i) => (
             <div
               key={i}
-              className="flex items-start gap-3 p-4 rounded-xl bg-card/50 border border-border/40"
+              className="flex items-start gap-3 p-4 rounded-xl bg-card/80 border border-border/40"
             >
-              <div className="p-2 rounded-lg bg-yellow-500/10">
-                <Icon name={item.icon} size={20} className="text-yellow-500" />
+              <div className="p-2 rounded-lg bg-primary/10">
+                <Icon name={item.icon} size={20} className="text-primary" />
               </div>
               <span className="text-sm font-medium mt-1.5">{item.text}</span>
             </div>

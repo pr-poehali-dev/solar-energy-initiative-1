@@ -11,10 +11,10 @@ export function NextGenSection() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-        <Card className="bg-card/50 border-border/40">
+        <Card className="bg-card/80 border-border/40">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
-              <Icon name="ClipboardList" size={18} className="text-yellow-500" /> Этапы работы
+              <Icon name="ClipboardList" size={18} className="text-primary" /> Этапы работы
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -25,10 +25,10 @@ export function NextGenSection() {
           </CardContent>
         </Card>
 
-        <Card className="bg-card/50 border-border/40">
+        <Card className="bg-card/80 border-border/40">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
-              <Icon name="Shield" size={18} className="text-yellow-500" /> Безопасность
+              <Icon name="Shield" size={18} className="text-primary" /> Безопасность
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -42,10 +42,10 @@ export function NextGenSection() {
           </CardContent>
         </Card>
 
-        <Card className="bg-card/50 border-border/40">
+        <Card className="bg-card/80 border-border/40">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
-              <Icon name="BarChart3" size={18} className="text-yellow-500" /> Наш опыт
+              <Icon name="BarChart3" size={18} className="text-primary" /> Наш опыт
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -58,10 +58,10 @@ export function NextGenSection() {
           </CardContent>
         </Card>
 
-        <Card className="bg-card/50 border-border/40">
+        <Card className="bg-card/80 border-border/40">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
-              <Icon name="Lightbulb" size={18} className="text-yellow-500" /> Освещение
+              <Icon name="Lightbulb" size={18} className="text-primary" /> Освещение
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -74,10 +74,10 @@ export function NextGenSection() {
           </CardContent>
         </Card>
 
-        <Card className="bg-card/50 border-border/40">
+        <Card className="bg-card/80 border-border/40">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
-              <Icon name="Plug" size={18} className="text-yellow-500" /> Электроснабжение
+              <Icon name="Plug" size={18} className="text-primary" /> Электроснабжение
             </CardTitle>
           </CardHeader>
           <CardContent>

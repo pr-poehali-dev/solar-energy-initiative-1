@@ -7,7 +7,7 @@ export function Navbar() {
       <div className="container flex h-14 max-w-screen-xl items-center">
         <div className="mr-4 flex">
           <a href="/" className="mr-6 flex items-center space-x-2">
-            <Icon name="Zap" size={24} className="text-yellow-500" />
+            <Icon name="Zap" size={24} className="text-primary" />
             <span className="font-bold">СК Пересвет</span>
           </a>
           <nav className="flex items-center space-x-6 text-sm font-medium">

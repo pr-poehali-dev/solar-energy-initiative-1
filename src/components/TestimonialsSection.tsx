@@ -116,7 +116,7 @@ function TestimonialCard({ name, role, quote, rating }: TestimonialCardProps) {
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
-              className={`h-4 w-4 ${i < rating ? "fill-yellow-500 text-yellow-500" : "text-muted-foreground"}`}
+              className={`h-4 w-4 ${i < rating ? "fill-primary text-primary" : "text-muted-foreground"}`}
             />
           ))}
         </div>

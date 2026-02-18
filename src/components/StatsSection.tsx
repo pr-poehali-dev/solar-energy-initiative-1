@@ -26,7 +26,7 @@ function StatCard({ icon, value, label }: StatCardProps) {
       <CardContent className="pt-6">
         <div className="text-center">
           <div className="flex justify-center mb-3">
-            <Icon name={icon} size={28} className="text-yellow-500" />
+            <Icon name={icon} size={28} className="text-primary" />
           </div>
           <div className="text-4xl font-bold mb-2">{value}</div>
           <div className="text-sm text-muted-foreground">{label}</div>

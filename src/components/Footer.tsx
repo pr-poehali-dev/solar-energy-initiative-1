@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Icon name="Zap" size={24} className="text-yellow-500" />
+              <Icon name="Zap" size={24} className="text-primary" />
               <span className="font-bold text-lg">СК Пересвет</span>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
@@ -23,15 +23,15 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Контакты</h3>
             <div className="space-y-3 text-sm">
               <a href="tel:+79270466555" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-                <Icon name="Phone" size={16} className="text-yellow-500 flex-shrink-0" />
+                <Icon name="Phone" size={16} className="text-primary flex-shrink-0" />
                 8 (927) 046-65-55
               </a>
               <a href="mailto:murmenergy@mail.ru" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-                <Icon name="Mail" size={16} className="text-yellow-500 flex-shrink-0" />
+                <Icon name="Mail" size={16} className="text-primary flex-shrink-0" />
                 murmenergy@mail.ru
               </a>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Icon name="MapPin" size={16} className="text-yellow-500 flex-shrink-0" />
+                <Icon name="MapPin" size={16} className="text-primary flex-shrink-0" />
                 г. Мурманск, ул. Воровского, д.13, оф. 14
               </div>
             </div>
@@ -41,15 +41,15 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Режим работы</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Icon name="Clock" size={16} className="text-yellow-500 flex-shrink-0" />
+                <Icon name="Clock" size={16} className="text-primary flex-shrink-0" />
                 Пн–Пт: 9:00 – 18:00
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Icon name="Clock" size={16} className="text-yellow-500 flex-shrink-0" />
+                <Icon name="Clock" size={16} className="text-primary flex-shrink-0" />
                 Сб: 10:00 – 15:00
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Icon name="PhoneCall" size={16} className="text-yellow-500 flex-shrink-0" />
+                <Icon name="PhoneCall" size={16} className="text-primary flex-shrink-0" />
                 Аварийный выезд — круглосуточно
               </div>
             </div>

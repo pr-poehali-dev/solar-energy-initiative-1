@@ -74,7 +74,7 @@ export function LeadFormButton({ children, variant = "default", size = "default"
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <Icon name="Zap" size={20} className="text-yellow-500" />
+            <Icon name="Zap" size={20} className="text-primary" />
             {success ? "Заявка отправлена!" : "Оставить заявку"}
           </DialogTitle>
         </DialogHeader>
