@@ -9,6 +9,7 @@ import { TestimonialsSection } from "@/components/TestimonialsSection"
 import { FaqSection } from "@/components/FaqSection"
 import { CtaSection } from "@/components/CtaSection"
 import { LicensesSection } from "@/components/LicensesSection"
+import { AboutSection } from "@/components/AboutSection"
 import { Footer } from "@/components/Footer"
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
       <Navbar />
       <main className="flex min-h-screen flex-col items-center">
         <HeroSection />
+        <AboutSection />
         <DashboardPreview />
         <FeaturesSection />
         <NextGenSection />
