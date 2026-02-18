@@ -5,24 +5,41 @@ import Icon from "@/components/ui/icon"
 
 const licenses = [
   {
-    title: "Лицензия на электромонтажные работы",
-    description: "Выдана Ростехнадзором, действует бессрочно",
-    image: "https://cdn.poehali.dev/projects/c928aad2-3861-4441-b968-365943f97160/files/8d8c3816-d663-40de-b305-b8696773791b.jpg",
+    title: "Лицензия МЧС",
+    description: "Деятельность по монтажу и обслуживанию средств пожарной безопасности. №51-06-2019-001601, действующая",
+    images: [
+      "https://cdn.poehali.dev/files/7b30309e-8ea3-4a76-9bbd-f9478f49055a.jpg",
+    ],
   },
   {
-    title: "Сертификат соответствия",
-    description: "Подтверждает соответствие работ ГОСТ и ПУЭ",
-    image: "https://cdn.poehali.dev/projects/c928aad2-3861-4441-b968-365943f97160/files/b5bdf0e0-0fcc-4394-9c70-57c9e588cd35.jpg",
+    title: "Свидетельство электролаборатории",
+    description: "Регистрация электролаборатории Ростехнадзором. №29-21/ЭЛ-25, до 10.08.2028",
+    images: [
+      "https://cdn.poehali.dev/files/3ff7851b-1b4a-4bee-aac9-65732c9347e0.jpg",
+      "https://cdn.poehali.dev/files/48945250-df7a-42b3-8912-0c1c83ddb0ad.jpg",
+    ],
   },
   {
-    title: "Допуск СРО",
-    description: "Членство в саморегулируемой организации строителей",
-    image: "https://cdn.poehali.dev/projects/c928aad2-3861-4441-b968-365943f97160/files/3314e66f-f0f2-4f84-a217-720ed15f04be.jpg",
+    title: "Выписка СРО (НОСТРОЙ)",
+    description: "Членство в СРО «ЖСОМ». Право на строительство, реконструкцию и капремонт",
+    images: [
+      "https://cdn.poehali.dev/files/20684673-884c-4604-baf2-dc353894e6cb.jpg",
+      "https://cdn.poehali.dev/files/df7e507a-c979-4216-bd4b-fa19a41891f6.jpg",
+    ],
   },
 ]
 
 export function LicensesSection() {
   const [selected, setSelected] = useState<number | null>(null)
+  const [page, setPage] = useState(0)
+
+  const openLicense = (index: number) => {
+    setSelected(index)
+    setPage(0)
+  }
+
+  const currentLicense = selected !== null ? licenses[selected] : null
+  const totalPages = currentLicense ? currentLicense.images.length : 0
 
   return (
     <section className="container max-w-screen-xl py-20">
@@ -36,14 +53,14 @@ export function LicensesSection() {
           <Card
             key={i}
             className="bg-card/50 border-border/40 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
-            onClick={() => setSelected(i)}
+            onClick={() => openLicense(i)}
           >
             <CardContent className="pt-6">
               <div className="aspect-[3/4] rounded-md overflow-hidden mb-4 bg-accent/20">
                 <img
-                  src={license.image}
+                  src={license.images[0]}
                   alt={license.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="flex items-start gap-2">
@@ -59,16 +76,39 @@ export function LicensesSection() {
       </div>
 
       <Dialog open={selected !== null} onOpenChange={() => setSelected(null)}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogTitle>
-            {selected !== null && licenses[selected].title}
+            {currentLicense?.title}
           </DialogTitle>
-          {selected !== null && (
-            <img
-              src={licenses[selected].image}
-              alt={licenses[selected].title}
-              className="w-full rounded-md"
-            />
+          {currentLicense && (
+            <>
+              <img
+                src={currentLicense.images[page]}
+                alt={`${currentLicense.title} — страница ${page + 1}`}
+                className="w-full rounded-md"
+              />
+              {totalPages > 1 && (
+                <div className="flex items-center justify-center gap-4 mt-2">
+                  <button
+                    onClick={() => setPage(Math.max(0, page - 1))}
+                    disabled={page === 0}
+                    className="p-2 rounded-full hover:bg-accent disabled:opacity-30 transition-opacity"
+                  >
+                    <Icon name="ChevronLeft" size={20} />
+                  </button>
+                  <span className="text-sm text-muted-foreground">
+                    {page + 1} / {totalPages}
+                  </span>
+                  <button
+                    onClick={() => setPage(Math.min(totalPages - 1, page + 1))}
+                    disabled={page === totalPages - 1}
+                    className="p-2 rounded-full hover:bg-accent disabled:opacity-30 transition-opacity"
+                  >
+                    <Icon name="ChevronRight" size={20} />
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </DialogContent>
       </Dialog>
