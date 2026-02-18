@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
 import Icon from "@/components/ui/icon"
+import { LeadFormButton } from "@/components/LeadForm"
 
 export function Navbar() {
   return (
@@ -30,9 +30,9 @@ export function Navbar() {
             <Icon name="Phone" size={14} />
             8 (800) 123-45-67
           </a>
-          <Button className="ml-4">
+          <LeadFormButton className="ml-4">
             Оставить заявку
-          </Button>
+          </LeadFormButton>
         </div>
       </div>
     </header>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Icon from "@/components/ui/icon"
+import { LeadFormButton } from "@/components/LeadForm"
 
 export function CtaSection() {
   return (
@@ -12,13 +13,15 @@ export function CtaSection() {
         Оставьте заявку — мы перезвоним в течение 15 минут, приедем на объект и составим смету бесплатно.
       </p>
       <div className="flex flex-wrap justify-center gap-4">
-        <Button size="lg" className="px-8">
+        <LeadFormButton size="lg" className="px-8">
           <Icon name="FileText" size={18} className="mr-2" />
           Оставить заявку
-        </Button>
-        <Button size="lg" variant="outline" className="px-8">
-          <Icon name="Phone" size={18} className="mr-2" />
-          8 (800) 123-45-67
+        </LeadFormButton>
+        <Button size="lg" variant="outline" className="px-8" asChild>
+          <a href="tel:+78001234567">
+            <Icon name="Phone" size={18} className="mr-2" />
+            8 (800) 123-45-67
+          </a>
         </Button>
       </div>
     </section>
