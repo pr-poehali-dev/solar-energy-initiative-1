@@ -1,93 +1,91 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { LineChart, Users, Activity } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 export function NextGenSection() {
   return (
-    <section className="container max-w-screen-xl py-20">
-      <h2 className="text-3xl font-bold mb-4">Платформа нового поколения</h2>
+    <section id="advantages" className="container max-w-screen-xl py-20">
+      <h2 className="text-3xl font-bold mb-4">Почему выбирают нас</h2>
       <p className="text-muted-foreground max-w-2xl mb-12">
-        Доступ к лучшим инструментам продуктивности — масштабируемым и созданным для уверенного роста вашего бизнеса. Все от А до Я интуитивно и продумано до мелочей.
+        Комплексный подход к электромонтажу: от проектирования до сдачи объекта. Работаем по ГОСТам и СНиПам с полным соблюдением норм безопасности.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         <Card className="bg-card/50 border-border/40">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
-              <Users className="h-4 w-4" /> Клиенты
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-3xl font-bold mb-4">145 200 ₽</div>
-            <div className="flex -space-x-2 mb-4">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <Avatar key={i} className="border-2 border-background w-8 h-8">
-                  <AvatarImage src={`/placeholder.svg?height=32&width=32`} />
-                  <AvatarFallback>U{i + 1}</AvatarFallback>
-                </Avatar>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="bg-card/50 border-border/40">
-          <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
-              <Activity className="h-4 w-4" /> Воронка
+              <Icon name="ClipboardList" size={18} className="text-yellow-500" /> Этапы работы
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <PipelineItem label="Этап 1" value={80} />
-            <PipelineItem label="Этап 2" value={65} />
-            <PipelineItem label="Этап 3" value={40} />
-            <PipelineItem label="Этап 4" value={25} />
+            <StageItem label="Выезд и замер" value={100} />
+            <StageItem label="Проектирование" value={100} />
+            <StageItem label="Монтаж" value={75} />
+            <StageItem label="Проверка и сдача" value={40} />
           </CardContent>
         </Card>
 
         <Card className="bg-card/50 border-border/40">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
-              <LineChart className="h-4 w-4" /> Аналитика
+              <Icon name="Shield" size={18} className="text-yellow-500" /> Безопасность
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="h-32 flex items-end gap-1 pb-4">
-              {Array.from({ length: 20 }).map((_, i) => {
-                const height = 20 + Math.random() * 80
-                return (
-                  <div key={i} className="bg-muted-foreground/30 w-full rounded-t" style={{ height: `${height}%` }} />
-                )
-              })}
+            <div className="space-y-3">
+              <SafetyItem text="Сертифицированные материалы" />
+              <SafetyItem text="Лицензированные специалисты" />
+              <SafetyItem text="Соответствие ПУЭ и ГОСТ" />
+              <SafetyItem text="Страхование объектов" />
+              <SafetyItem text="Гарантия до 5 лет" />
             </div>
           </CardContent>
         </Card>
 
         <Card className="bg-card/50 border-border/40">
           <CardHeader>
-            <CardTitle className="text-lg">Кампании</CardTitle>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Icon name="BarChart3" size={18} className="text-yellow-500" /> Наш опыт
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="h-32 flex items-center justify-center text-muted-foreground">
-              Визуализация данных кампаний
+            <div className="space-y-3">
+              <ExperienceItem label="Квартиры" count="1 200+" />
+              <ExperienceItem label="Частные дома" count="580+" />
+              <ExperienceItem label="Офисы и магазины" count="350+" />
+              <ExperienceItem label="Промышленные объекты" count="120+" />
             </div>
           </CardContent>
         </Card>
 
         <Card className="bg-card/50 border-border/40">
           <CardHeader>
-            <CardTitle className="text-lg">Генератор идей</CardTitle>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Icon name="Lightbulb" size={18} className="text-yellow-500" /> Освещение
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="h-32 flex items-center justify-center">
-              <div className="relative w-32 h-32">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-20" />
-                <div className="absolute inset-4 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 opacity-20" />
-                <div className="absolute inset-8 rounded-full bg-gradient-to-r from-green-500 to-teal-500 opacity-20" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-sm font-medium">Цель — Фонд</div>
-                </div>
-              </div>
+            <div className="space-y-3">
+              <SafetyItem text="Дизайнерское освещение" />
+              <SafetyItem text="LED и умный свет" />
+              <SafetyItem text="Ландшафтная подсветка" />
+              <SafetyItem text="Аварийное освещение" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card/50 border-border/40">
+          <CardHeader>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Icon name="Plug" size={18} className="text-yellow-500" /> Электроснабжение
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              <SafetyItem text="Ввод электричества в дом" />
+              <SafetyItem text="Установка щитов и автоматов" />
+              <SafetyItem text="Подключение генераторов" />
+              <SafetyItem text="Стабилизаторы напряжения" />
             </div>
           </CardContent>
         </Card>
@@ -96,12 +94,12 @@ export function NextGenSection() {
   )
 }
 
-interface PipelineItemProps {
+interface StageItemProps {
   label: string
   value: number
 }
 
-function PipelineItem({ label, value }: PipelineItemProps) {
+function StageItem({ label, value }: StageItemProps) {
   return (
     <div className="space-y-1">
       <div className="flex items-center justify-between text-sm">
@@ -109,6 +107,24 @@ function PipelineItem({ label, value }: PipelineItemProps) {
         <span>{value}%</span>
       </div>
       <Progress value={value} className="h-2 bg-muted/30" />
+    </div>
+  )
+}
+
+function SafetyItem({ text }: { text: string }) {
+  return (
+    <div className="flex items-center gap-2 text-sm">
+      <Icon name="Check" size={16} className="text-green-500 flex-shrink-0" />
+      <span>{text}</span>
+    </div>
+  )
+}
+
+function ExperienceItem({ label, count }: { label: string; count: string }) {
+  return (
+    <div className="flex items-center justify-between text-sm">
+      <span className="text-muted-foreground">{label}</span>
+      <span className="font-semibold">{count}</span>
     </div>
   )
 }

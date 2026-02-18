@@ -1,25 +1,26 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import Icon from "@/components/ui/icon"
 
 export function FeaturesSection() {
   return (
-    <section className="container max-w-screen-xl py-16">
-      <h2 className="text-3xl font-bold text-center mb-12">Ключевые преимущества</h2>
+    <section id="services" className="container max-w-screen-xl py-16">
+      <h2 className="text-3xl font-bold text-center mb-12">Наши услуги</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <FeatureCard
-          number={1}
-          title="Опишите крутую функцию продукта"
-          description="Впечатлите, формируйте ожидания."
+          icon="Home"
+          title="Электромонтаж в квартирах и домах"
+          description="Полная разводка электрики, замена проводки, установка щитков, розеток и выключателей."
         />
         <FeatureCard
-          number={2}
-          title="Опишите крутую функцию продукта"
-          description="Впечатлите, формируйте ожидания."
+          icon="Building2"
+          title="Электрика для бизнеса"
+          description="Монтаж электросетей в офисах, магазинах и на производстве. Проектирование и сдача под ключ."
         />
         <FeatureCard
-          number={3}
-          title="Опишите крутую функцию продукта"
-          description="Впечатлите, формируйте ожидания."
+          icon="Wrench"
+          title="Ремонт и обслуживание"
+          description="Диагностика неисправностей, замена автоматов, ремонт проводки и аварийный выезд."
         />
       </div>
     </section>
@@ -27,18 +28,18 @@ export function FeaturesSection() {
 }
 
 interface FeatureCardProps {
-  number: number
+  icon: string
   title: string
   description: string
 }
 
-function FeatureCard({ number, title, description }: FeatureCardProps) {
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <Card className="bg-accent/50 border-dashed border-border/60">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground font-medium text-sm">
-            {number}
+        <CardTitle className="flex items-center gap-3">
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500/20">
+            <Icon name={icon} size={20} className="text-yellow-500" />
           </span>
           <span>{title}</span>
         </CardTitle>
