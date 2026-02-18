@@ -18,9 +18,9 @@ export function CtaSection() {
           Оставить заявку
         </LeadFormButton>
         <Button size="lg" variant="outline" className="px-8" asChild>
-          <a href="tel:+78001234567">
+          <a href="tel:+79270466555">
             <Icon name="Phone" size={18} className="mr-2" />
-            8 (800) 123-45-67
+            8 (927) 046-65-55
           </a>
         </Button>
       </div>

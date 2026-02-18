@@ -26,9 +26,9 @@ export function Navbar() {
           </nav>
         </div>
         <div className="ml-auto flex items-center space-x-4">
-          <a href="tel:+78001234567" className="text-sm font-medium transition-colors hover:text-foreground/80 flex items-center gap-1">
+          <a href="tel:+79270466555" className="text-sm font-medium transition-colors hover:text-foreground/80 flex items-center gap-1">
             <Icon name="Phone" size={14} />
-            8 (800) 123-45-67
+            8 (927) 046-65-55
           </a>
           <LeadFormButton className="ml-4">
             Оставить заявку
