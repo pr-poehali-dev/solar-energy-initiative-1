@@ -16,8 +16,8 @@ const Index = () => {
   return (
     <div className="dark bg-background text-foreground min-h-screen relative">
       <div
-        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-55"
-        style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/c928aad2-3861-4441-b968-365943f97160/files/102f1322-99a5-4bce-b7e6-d3e14a06fe58.jpg')" }}
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-15"
+        style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/c928aad2-3861-4441-b968-365943f97160/bucket/133ebaa4-72f2-499c-bbdc-cc8b5ed72f27.jpg')" }}
       />
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-background/10 via-background/50 to-background/90" />
       <Navbar />
