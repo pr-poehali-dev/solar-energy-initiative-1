@@ -6,7 +6,7 @@ export function FeaturesSection() {
     <section id="services" className="container max-w-screen-xl py-16">
       <h2 className="text-3xl font-bold text-center mb-12">Наши услуги</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <FeatureCard
           icon="Home"
           title="Электромонтаж в квартирах и домах"
@@ -21,6 +21,11 @@ export function FeaturesSection() {
           icon="Wrench"
           title="Ремонт и обслуживание"
           description="Диагностика неисправностей, замена автоматов, ремонт проводки и аварийный выезд."
+        />
+        <FeatureCard
+          icon="FlaskConical"
+          title="Электролаборатория"
+          description="Услуги электролаборатории в Мурманске. Испытания и измерения электроустановок до 1000 вольт."
         />
       </div>
     </section>
