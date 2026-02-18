@@ -16,10 +16,10 @@ const Index = () => {
   return (
     <div className="dark bg-background text-foreground min-h-screen relative">
       <div
-        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/c928aad2-3861-4441-b968-365943f97160/files/9375cffd-0a23-41df-b6e2-774779619234.jpg')" }}
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40"
+        style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/c928aad2-3861-4441-b968-365943f97160/files/102f1322-99a5-4bce-b7e6-d3e14a06fe58.jpg')" }}
       />
-      <div className="fixed inset-0 z-0 bg-gradient-to-b from-background/30 via-background/60 to-background" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-background/10 via-background/50 to-background/90" />
       <Navbar />
       <main className="relative z-10 flex min-h-screen flex-col items-center">
         <HeroSection />
