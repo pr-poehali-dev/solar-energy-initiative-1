@@ -5,7 +5,7 @@ export function StatsSection() {
   return (
     <section className="container max-w-screen-xl py-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard icon="CalendarCheck" value="12+" label="Лет на рынке" />
+        <StatCard icon="CalendarCheck" value="7+" label="Лет на рынке" />
         <StatCard icon="Home" value="2 500+" label="Выполненных объектов" />
         <StatCard icon="Users" value="50+" label="Специалистов в команде" />
         <StatCard icon="ShieldCheck" value="5 лет" label="Гарантия на работы" />
