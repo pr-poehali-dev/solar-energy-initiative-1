@@ -11,7 +11,7 @@ import { CtaSection } from "@/components/CtaSection"
 
 const Index = () => {
   return (
-    <div className="dark bg-black text-white min-h-screen">
+    <div className="dark bg-background text-foreground min-h-screen">
       <Navbar />
       <main className="flex min-h-screen flex-col items-center">
         <HeroSection />
